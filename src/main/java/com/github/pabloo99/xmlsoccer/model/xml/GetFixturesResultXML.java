@@ -3,7 +3,10 @@ package com.github.pabloo99.xmlsoccer.model.xml;
 import lombok.Data;
 
 import javax.xml.bind.annotation.*;
-import java.util.*;
+import java.util.Collections;
+import java.util.Date;
+import java.util.List;
+import java.util.Optional;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
@@ -58,7 +61,9 @@ public class GetFixturesResultXML {
             "homeTeamYellowCardDetails",
             "awayTeamYellowCardDetails",
             "homeTeamRedCardDetails",
-            "awayTeamRedCardDetails"
+            "awayTeamRedCardDetails",
+            "homeGoalDetails",
+            "awayGoalDetails"
     })
     @Data
     public static class Match {
@@ -136,6 +141,10 @@ public class GetFixturesResultXML {
         protected String homeTeamRedCardDetails;
         @XmlElement(name = "AwayTeamRedCardDetails")
         protected String awayTeamRedCardDetails;
+        @XmlElement(name = "HomeGoalDetails", required = true)
+        protected String homeGoalDetails;
+        @XmlElement(name = "AwayGoalDetails", required = true)
+        protected String awayGoalDetails;
     }
 
 }

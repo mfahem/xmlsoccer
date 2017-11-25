@@ -48,4 +48,6 @@ public class GetFixturesResultDto implements Serializable {
     private String awayTeamYellowCardDetails;
     private String homeTeamRedCardDetails;
     private String awayTeamRedCardDetails;
+    private String homeGoalDetails;
+    private String awayGoalDetails;
 }
